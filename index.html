@@ -81,21 +81,14 @@
 
   /* 照片 */
   .photo { position: relative; width: 220px; height: 220px; justify-self: center; }
-  .photo::before {
-    content: ""; position: absolute; inset: -14px -14px 14px 14px;
-    border-radius: 42% 58% 55% 45% / 50% 45% 55% 50%;
-    background: var(--accent-soft);
-  }
   .photo .frame {
     position: relative; width: 100%; height: 100%;
     border-radius: 50%; overflow: hidden;
-    border: 5px solid var(--surface);
-    box-shadow: var(--shadow);
-    background: linear-gradient(135deg, var(--accent), #8fd3b4);
-    display: flex; align-items: center; justify-content: center;
+    border: 4px solid var(--surface);
+    box-shadow: 0 0 0 6px var(--accent-soft), var(--shadow);
+    background: var(--surface);
   }
-  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .photo .initial { position: absolute; font-size: 5rem; font-weight: 700; color: #fff; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 
   /* 區塊 */
   section { padding: 44px 0 8px; }
@@ -212,7 +205,6 @@
 
     <div class="photo">
       <div class="frame">
-        <span class="initial">M</span>
         <img src="photo.jpg" alt="李明穎 Milly" onerror="this.style.display='none'">
       </div>
     </div>
