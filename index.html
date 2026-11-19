@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你的名字|個人履歷</title>
+<meta name="description" content="你的名字的個人履歷網站">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #6b7280;
+    --accent: #2f7d5b;
+    --line: #e5e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --card: #1c2024;
+      --text: #e8eaed;
+      --muted: #9aa3ad;
+      --accent: #5fc79a;
+      --line: #2c3238;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 72px 0 40px; }
+  header h1 { font-size: 2.4rem; letter-spacing: 0.02em; }
+  header .role { color: var(--accent); font-size: 1.15rem; margin-top: 6px; font-weight: 600; }
+  header p.intro { margin-top: 18px; color: var(--muted); max-width: 600px; }
+  .links { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; padding: 9px 18px; border-radius: 999px;
+    border: 1px solid var(--accent); color: var(--accent);
+    text-decoration: none; font-size: 0.95rem; transition: all .15s;
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn:hover { opacity: .85; transform: translateY(-1px); }
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  section h2 { font-size: 1.25rem; margin-bottom: 18px; }
+  .item { margin-bottom: 22px; }
+  .item .head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; }
+  .item .title { font-weight: 600; }
+  .item .date { color: var(--muted); font-size: 0.9rem; }
+  .item .sub { color: var(--muted); font-size: 0.95rem; }
+  .item ul { margin: 8px 0 0 20px; }
+  .item li { margin-bottom: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: var(--card); border: 1px solid var(--line);
+    padding: 4px 12px; border-radius: 8px; font-size: 0.9rem;
+  }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px;
+  }
+  .card h3 { font-size: 1rem; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 0.92rem; }
+  .card a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  footer { padding: 32px 0 56px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 頂部:姓名與簡介 -->
+  <header>
+    <h1>你的名字</h1>
+    <div class="role">你的職稱或定位(例如:UI 設計師 / 行銷企劃 / 軟體工程師)</div>
+    <p class="intro">
+      用兩三句話介紹自己:你是誰、擅長什麼、想做什麼樣的工作。
+      讓招募者 10 秒內就知道你的價值。
+    </p>
+    <div class="links">
+      <a class="btn primary" href="mailto:your@email.com">寄信給我</a>
+      <a class="btn" href="resume.pdf">下載 PDF 履歷</a>
+      <a class="btn" href="https://www.linkedin.com/in/你的帳號" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/millylee1022" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <!-- 工作經歷 -->
+  <section>
+    <h2>工作經歷</h2>
+
+    <div class="item">
+      <div class="head">
+        <span class="title">職稱|公司名稱</span>
+        <span class="date">2023.06 – 至今</span>
+      </div>
+      <ul>
+        <li>用「做了什麼 + 帶來什麼成果」來寫,例如:優化流程,讓處理時間縮短 30%。</li>
+        <li>盡量放具體數字或可驗證的成果。</li>
+        <li>每份工作寫 2~4 點即可。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="head">
+        <span class="title">職稱|公司名稱</span>
+        <span class="date">2021.07 – 2023.05</span>
+      </div>
+      <ul>
+        <li>工作內容與成果。</li>
+        <li>工作內容與成果。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 學歷 -->
+  <section>
+    <h2>學歷</h2>
+    <div class="item">
+      <div class="head">
+        <span class="title">學校名稱|系所</span>
+        <span class="date">2017 – 2021</span>
+      </div>
+      <div class="sub">學位、重要成績或專題(可省略)</div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section>
+    <h2>技能</h2>
+    <div class="tags">
+      <span class="tag">技能 1</span>
+      <span class="tag">技能 2</span>
+      <span class="tag">技能 3</span>
+      <span class="tag">工具 / 軟體</span>
+      <span class="tag">語言:中文(母語)</span>
+      <span class="tag">語言:英文</span>
+    </div>
+  </section>
+
+  <!-- 作品 / 專案 -->
+  <section>
+    <h2>作品 / 專案</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>專案名稱 A</h3>
+        <p>一句話說明專案內容、你的角色與成果。</p>
+        <a href="#">查看專案 →</a>
+      </div>
+      <div class="card">
+        <h3>專案名稱 B</h3>
+        <p>一句話說明專案內容、你的角色與成果。</p>
+        <a href="#">查看專案 →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 你的名字|Email:your@email.com
+  </footer>
+
+</div>
+</body>
+</html>
